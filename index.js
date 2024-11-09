@@ -59,7 +59,7 @@ async function insertUser(name,jelszo, email) {
 // Post route a form adatainak kezelésére
 app.post('/regisztracio', (req, res) => {
     const { nev,password,email } = req.body;
-    res.send(insertUser(nev,password,email))
+    res.send(insertUser("a","b2","c3"))
     // Válasz a form benyújtására
 });
 
