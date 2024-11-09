@@ -11,7 +11,7 @@ document.getElementById('registration-form').addEventListener('submit', function
     .then(response => response.text())  // A válasz szövegként történő kezelése
     .then(data => {
         // Válasz megjelenítése a felhasználónak
-        document.getElementById('response').textContent = data;
+        document.getElementById('container').textContent = data;
     })
     .catch(error => {
         console.error('Hiba történt:', error);
