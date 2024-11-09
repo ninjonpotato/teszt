@@ -14,7 +14,7 @@
     })
     .catch(error => {
         console.error('Hiba történt:', error);
-        document.getElementById('response').textContent = 'Hiba történt a regisztráció során.';
+        document.getElementById('container').textContent = 'Hiba történt a regisztráció során.';
     });
 }
 
