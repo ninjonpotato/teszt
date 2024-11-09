@@ -58,8 +58,8 @@ async function insertUser(name,jelszo, email) {
 
 // Post route a form adatainak kezelésére
 app.post('/regisztracio', (req, res) => {
-    const { nev,password,lakc,email } = req.body;
-    insertUser(nev,pass,email);
+    const { nev,password,email } = req.body;
+    insertUser(nev,password,email);
     // Itt kezelheted az adatokat, pl. elmentheted adatbázisba vagy más logikát írhatsz
     //megcsinálni hogy töltsön adatot a Mars adatbázisba
     res.send("siker")
