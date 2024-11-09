@@ -47,7 +47,7 @@ async function insertUser(name,jelszo, email) {
   try {
      const res = await pool.query(
       'INSERT INTO admin (nev, jelszo,email) VALUES ($1, $2,$3) RETURNING *',
-      [nev, jelszo, email]
+      [name, jelszo, email]
     );
     return res.rows; // Az új beszúrt sor visszaadása
   } catch (err) {
