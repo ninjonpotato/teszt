@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-
+const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const suba = require('@supabase/supabase-js');
-
 const supabaseUrl = "https://tybayhvmngjrfvbdhhis.supabase.co"
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR5YmF5aHZtbmdqcmZ2YmRoaGlzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzA2NTgzNzAsImV4cCI6MjA0NjIzNDM3MH0.BSg6sOVNl0KlWVzs6hoWm5ytpxCCb6KZomcxSDlLdFE"
 const supabase = suba.createClient(supabaseUrl, supabaseKey)
@@ -31,7 +29,7 @@ app.use(express.json());
 
 // Static files kiszolgálása
 app.use(express.static("dist/webshop"));
-
+app.use(bodyParser.urlencoded({ extended: true }));
 //Adatbázisrül adat lekérés
 async function fetchData() {
   try {
@@ -60,7 +58,7 @@ async function insertUser(name,jelszo, email) {
 
 // Post route a form adatainak kezelésére
 app.post('/regisztracio', (req, res) => {
-    const { nev,pass,lakc,email } = req.body;
+    const { nev,password,lakc,email } = req.body;
     insertUser(nev,pass,email);
     // Itt kezelheted az adatokat, pl. elmentheted adatbázisba vagy más logikát írhatsz
     //megcsinálni hogy töltsön adatot a Mars adatbázisba
