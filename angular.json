@@ -28,7 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [
-               "src/szkriptek/respons.js"
+               "src/szkriptek/register.js"
             ]
           },
           "configurations": {
