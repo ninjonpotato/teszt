@@ -1,0 +1,9 @@
+<div class="carousel">
+    <button (click)="prev()">&#10094;</button>
+    <div class="carousel-item">
+      <h3>{{ items[currentIndex].title }}</h3>
+      <img [src]="items[currentIndex].imageUrl" alt="Product Image" class="img" />
+      <p>{{ items[currentIndex].description }}</p>
+    </div>
+    <button (click)="next()">&#10095;</button>
+  </div>

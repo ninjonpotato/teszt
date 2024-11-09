@@ -1,0 +1,67 @@
+
+  .navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #6b287c;
+    padding: 5px 10px;
+    height: 100px;
+  }
+  
+  .logo {
+    margin-right: auto;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 8px;
+    text-decoration: none;
+    color: #fff;
+    height: 100px;
+  }
+  
+  .nav-item img.icons {
+    position: relative;
+    padding-top: 8%;
+    width: 50%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  .login-icon img.log {
+    padding-top: 10%;
+    width: 100%;
+    height: auto;
+  }
+
+  .login-icon img.log:hover{
+    box-shadow: 0 0 40px 40px #ffffff;
+    border-radius: 50%;
+  }
+  
+  .nav-item span {
+    position: absolute;
+    padding-top: 2%;
+    font-size: larger;
+    color: #fff;
+  }
+  
+  .nav-item:hover {
+    background-color: #4e1f5c;
+    color: #ffcc00;
+  }
+  
+  .nav-item:hover span,
+  .nav-item:hover img.icons {
+    color: #ffcc00;
+  }

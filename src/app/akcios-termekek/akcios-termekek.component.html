@@ -1,0 +1,10 @@
+<div class="promotional-products">
+    <h2>Akciós Termékek</h2>
+    <div class="product-list">
+      <div *ngFor="let product of discountedProducts" class="product">
+        <img [src]="product.imageUrl" alt="Product Image" class = "im" />
+        <p>{{ product.name }}</p>
+        <span class="discount">50%</span>
+      </div>
+    </div>
+  </div>
