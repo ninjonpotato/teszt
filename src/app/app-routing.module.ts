@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
 { path: '', redirectTo: '/fooldal', pathMatch: 'full' },
 { path: 'fooldal', component: AppComponent }
-    ]  // Siker oldal];
+  ] 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

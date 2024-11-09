@@ -60,7 +60,7 @@ async function insertUser(name,jelszo, email) {
 app.post('/regisztracio', (req, res) => {
     const {nev,email,password } = req.body;
     insertUser(nev,password,email);
-    res.redirect('https://frozen-forest-93816-b483a1d3b2e2.herokuapp.com/fooldal')
+    res.redirect('/fooldal')
     // Válasz a form benyújtására
 });
 
