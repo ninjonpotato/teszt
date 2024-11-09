@@ -1,20 +1,4 @@
-console.log("üdv az index.jsben");
 const express = require('express');
-const path = require('path');
-const app = express();
-
-// Statikus fájlok szolgáltatása a dist mappából
-app.use(express.static('dist/webshop'));
-
-// Port beállítása, amit Heroku biztosít
-const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
-
-
-
-/*const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -88,4 +72,4 @@ app.post('/regisztracio', (req, res) => {
 app.listen(PORT, () => {
   // 
     console.log(`Server is running on http://localhost:${PORT}`);
-});*/
+});
