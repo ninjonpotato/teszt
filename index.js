@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 // Statikus fájlok szolgáltatása a dist mappából
-app.use(express.static('dist'));
+app.use(express.static('dist/webshop'));
 
 // Port beállítása, amit Heroku biztosít
 const port = process.env.PORT || 8080;
