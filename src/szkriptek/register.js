@@ -1,5 +1,4 @@
-document.getElementById('registration-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Megakadályozza az űrlap alapértelmezett beküldését
+ function kuldes() {
 
     const formData = new FormData(this);  // Összegyűjti a form adatokat
 
@@ -17,4 +16,5 @@ document.getElementById('registration-form').addEventListener('submit', function
         console.error('Hiba történt:', error);
         document.getElementById('response').textContent = 'Hiba történt a regisztráció során.';
     });
-});
+}
+
