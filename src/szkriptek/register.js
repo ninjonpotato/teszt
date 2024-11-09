@@ -1,5 +1,5 @@
  function kuldes() {
-
+    alert("üdv")
     const formData = new FormData(this);  // Összegyűjti a form adatokat
 
     // AJAX POST kérés küldése
