@@ -9,6 +9,8 @@ import { KozelgoAkciokComponent } from './kozelgo-akciok/kozelgo-akciok.componen
 import { AkciosTermekekComponent } from './akcios-termekek/akcios-termekek.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
+import { BejelentkezesComponent } from './bejelentkezes/bejelentkezes.component';
+import { RegisztracioComponent } from './regisztracio/regisztracio.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FooterComponent } from './footer/footer.component';
     KozelgoAkciokComponent,
     AkciosTermekekComponent,
     CarouselComponent,
-    FooterComponent
+    FooterComponent,
+    BejelentkezesComponent,
+    RegisztracioComponent
   ],
   imports: [
     BrowserModule,
