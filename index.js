@@ -46,7 +46,7 @@ async function fetchData() {
 async function insertUser(name,jelszo, email) {
   try {
      const res = await pool.query(
-      'INSERT INTO admin (nev, jelszo,email) VALUES ($1, $2,$3) RETURNING *',
+      'INSERT INTO admin (nev, jelszo,email) VALUES ($1, $2,$3)',
       [nev, jelszo, email]
     );
     return res.rows; // Az új beszúrt sor visszaadása
@@ -59,15 +59,12 @@ async function insertUser(name,jelszo, email) {
 // Post route a form adatainak kezelésére
 app.post('/regisztracio', (req, res) => {
     const { nev,password,email } = req.body;
-    insertUser(nev,password,email);
-    // Itt kezelheted az adatokat, pl. elmentheted adatbázisba vagy más logikát írhatsz
-    //megcsinálni hogy töltsön adatot a Mars adatbázisba
-    res.send("siker")
+    res.send(insertUser(nev,password,email))
     // Válasz a form benyújtására
 });
 
 // Alkalmazás indítása
 app.listen(PORT, () => {
-  // 
+
     console.log(`Server is running on http://localhost:${PORT}`);
 });
