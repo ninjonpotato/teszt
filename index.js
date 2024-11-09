@@ -30,6 +30,11 @@ app.use(express.json());
 // Static files kiszolgálása
 app.use(express.static("dist/webshop"));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.get('*', (req, res) => {
+  res.sendFile("dist/webshop/index.html");
+});
+
+
 //Adatbázisrül adat lekérés
 async function fetchData() {
   try {
