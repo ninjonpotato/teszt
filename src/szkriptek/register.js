@@ -1,6 +1,5 @@
- function kuldes() {
-    alert("üdv")
-    const formData = new FormData(this);  // Összegyűjti a form adatokat
+ function kuldes(event) {
+    const formData = new FormData(event.target);  // Összegyűjti a form adatokat
 
     // AJAX POST kérés küldése
     fetch('https://frozen-forest-93816-b483a1d3b2e2.herokuapp.com/regisztracio', {
