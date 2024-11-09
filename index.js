@@ -30,7 +30,7 @@ app.use(cors());
 app.use(express.json());
 
 // Static files kiszolgálása
-app.use(express.static("dist"));
+app.use(express.static("dist/webshop"));
 
 //Adatbázisrül adat lekérés
 async function fetchData() {
